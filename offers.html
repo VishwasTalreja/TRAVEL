@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Offers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f8f9fa;
+        }
+
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .flex-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 28%;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .flex-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .headline {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .offer {
+            font-size: 20px;
+            color: #007BFF;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .details {
+            text-align: left;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .details h4 {
+            margin: 10px 0 5px;
+            color: #555;
+        }
+
+        .details ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        @media (max-width: 768px) {
+            .flex-card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Maldives Card -->
+        <div class="flex-card">
+            <h1 class="headline">MALDIVES</h1>
+            <h2 class="offer">SPECIAL OFFER!</h2>
+            <img src="download1.jpg" alt="Maldives Overwater Villas" class="image">
+            <div class="details">
+                <h4>Visiting Places:</h4>
+                <ul>
+                    <li>Maafushi Island</li>
+                    <li>Male City</li>
+                    <li>Banana Reef (Snorkeling)</li>
+                </ul>
+                <h4>Flight:</h4>
+                <ul>
+                    <li>Round-trip airfare included from major international airports.</li>
+                </ul>
+                <h4>Description:</h4>
+                <p>A 5-star resort with all-inclusive meals and spa services. Get 30% off for bookings this week!</p>
+            </div>
+            <div class="price">Price Range: Starting from $2,500 per person</div>
+           <button> <a href="book form.html">BOOK NOW</a></button>
+        </div>
+
+        <!-- Paris Card -->
+        <div class="flex-card">
+            <h1 class="headline">PARIS</h1>
+            <h2 class="offer">GROUP OFFER!</h2>
+            <img src="download3.jpeg" alt="Eiffel Tower in Paris" class="image">
+            <div class="details">
+                <h4>Visiting Places:</h4>
+                <ul>
+                    <li>Eiffel Tower</li>
+                    <li>Louvre Museum</li>
+                    <li>Notre-Dame Cathedral</li>
+                </ul>
+                <h4>Flight:</h4>
+                <ul>
+                    <li>Domestic flight options within Paris for easy travel.</li>
+                </ul>
+                <h4>Description:</h4>
+                <p>Indulge in luxury at a 5-star resort with all-inclusive meals and spa services. Save 30% this week!</p>
+            </div>
+            <div class="price">Price Range: Starting from $30,000 </div>
+            <button><a href="book form.html">BOOK NOW</a></button>
+        </div>
+
+        <!-- Turkey Card -->
+        <div class="flex-card">
+            <h1 class="headline">TURKEY</h1>
+            <h2 class="offer">NORMAL OFFER!</h2>
+            <img src="download4.jpeg" alt="Turkey Resorts" class="image">
+            <div class="details">
+                <h4>Visiting Places:</h4>
+                <ul>
+                    <li>Istanbul</li>
+                    <li>Ankara</li>
+                    <li>Izmir</li>
+                </ul>
+                <h4>Flight:</h4>
+                <ul>
+                    <li>Turkish Airlines offer promotional fares on Economy Class tickets.</li>
+                </ul>
+                <h4>Description:</h4>
+                <p>Turkey offers a wide range of affordable and luxurious resort options for travelers.</p>
+            </div>
+            <div class="price">Price Range: $30–$50 per day</div>
+          <button>  <a href="book form.html">BOOK NOW</a></button>
+        </div>
+
+        <!-- Baku Card -->
+        <div class="flex-card">
+            <h1 class="headline">BAKU</h1>
+            <h2 class="offer">NORMAL OFFER!</h2>
+            <img src="download5.jpg" alt="Baku Resorts" class="image">
+            <div class="details">
+                <h4>Visiting Places:</h4>
+                <ul>
+                    <li>Maiden Tower</li>
+                    <li>Ateshgah of Baku</li>
+                    <li>Yanar Dag Hike</li>
+                </ul>
+                <h4>Flight:</h4>
+                <ul>
+                    <li>Azerbaijan Airlines: National carrier offering flights to 10+ destinations.</li>
+                </ul>
+                <h4>Description:</h4>
+                <p>A 4-star resort with a private beach and outdoor pool. Relax on the beach and enjoy water sports.</p>
+            </div>
+            <div class="price">Price Range: Starting from $500–$1,500 per person</div>
+            <button><a href="book form.html">BOOK NOW</a></button>
+        </div>
+    </div>
+</body>
+
+</html>

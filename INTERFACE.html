@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tralife | Travel where you love</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body 
+        {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            font-size: 28px;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 1px;
+     text-transform: uppercase;
+    color: white;
+    background: linear-gradient(90deg, #000000, #661a2d); /* Gradient effect */
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-images img {
+            width: 100%;
+            flex-shrink: 0;
+        }
+        .carousel h1 
+        {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 30px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 50%;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .arrow:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .arrow.left {
+            left: 10px;
+        }
+        .arrow.right {
+            right: 10px;
+        }
+        .book-me-button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px 30px;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        .book-me-button:hover {
+            transform: scale(1);
+            background-color: darkred;
+            cursor: pointer;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-around;
+            padding: 10px;
+            background-color: #f8f9fa;
+            font-size: 14px;
+        }
+        .footer .footitem {
+            text-align: left;
+        }
+        .footer .footitem h2 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .footer .footitem p {
+            margin: 5px 0;
+        }
+        .footer .footitem i {
+            margin-right: 10px;
+        }
+        </style>
+        </head>
+        <body>
+        <header>TRA LIFE | TRAVEL WHERE WE WANT YOU TO TRAVEL</header>
+        <div class="carousel">
+        <div class="carousel-images">
+            <img src="3.jpg" alt="Tokyo, Japan">
+            <img src="14.jpg" alt="Paris, France">
+            <img src="12.jpg" alt="SINGAPORE">
+            <img src="5.jpg" alt=" Baku,Thailand ">
+            <img src="1.jpg" alt="NEWJERSSY,USA ">
+        </div>
+        <h1 id="image-title">Tokyo, Japan</h1>
+        <a href="offers.html" class="book-me-button">BOOK ME</a>
+        <div class="arrow left" onclick="prevImage()">&#8249;</div>
+        <div class="arrow right" onclick="nextImage()">&#8250;</div>
+        <div class="arrow right" onclick="nextImage()">&#8250;</div>
+        <div class="arrow right" onclick="nextImage()">&#8250;</div>
+        </div>
+
+        <div class="footer">
+        <div class="footitem footitem1">
+            <h2>Tralife</h2>
+            <p>@ 2025 Tralife</p>
+            <p>All Rights Reserved</p>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div class="footitem">
+            <h2>Purchase and Payment</h2>
+            <a href="pay.html">How to pay</a>
+            <p>Documents</p>
+          
+        </div>
+        <div class="footitem">
+            <h2>Before traveling</h2>
+            <a href="https://visa.nadra.gov.pk/e-visa/">Visa</a>
+            <p></p>
+            <a href="insurance.html">Insurance</a>
+            </div>
+        <div class="footitem">
+            <h2>About Us</h2>
+            <a href="generalinfo.html">General information</a>
+            <p></p> 
+            <a href="CONTACT.html">Contacts</a>
+            
+        </div>
+    </div>
+
+    <script>
+        const carouselImages = document.querySelector('.carousel-images');
+        const imageTitle = document.getElementById('image-title');
+        const titles = ["Tokyo, Japan", "Paris, France", "SINGAPORE","BAKU","NEWJERSSY,USA"];
+        let currentIndex = 0;
+
+        function updateCarousel() {
+            carouselImages.style.transform = `translateX(-${currentIndex * 100}%)`;
+            imageTitle.textContent = titles[currentIndex];
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex === 0) ? titles.length - 1 : currentIndex - 1;
+            updateCarousel();
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex === titles.length - 1) ? 0 : currentIndex + 1;
+            updateCarousel();
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex === titles.length - 1) ? 0 : currentIndex + 1;
+            updateCarousel();
+        }
+        function nextImage() {
+            currentIndex = (currentIndex === titles.length - 1) ? 0 : currentIndex + 1;
+            updateCarousel();
+        }
+    </script>
+</body>
+</html>
