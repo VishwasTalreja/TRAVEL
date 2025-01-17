@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        /* Wrapper for the content */
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Individual card styling */
+        .card {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            width: 300px;
+            text-align: left;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            color: #0a8848;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 14px;
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .card p strong {
+            color: #000;
+        }
+
+        .icon {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .icon svg {
+            width: 16px;
+            height: 16px;
+            fill: #0a8848;
+        }
+
+        /* Email card styling */
+        .email-card {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            width: 95%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .email-card h3 {
+            font-size: 20px;
+            color: #0a8848;
+            margin-bottom: 10px;
+        }
+
+        .email-card p {
+            font-size: 14px;
+            margin: 0;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Karachi Address -->
+        <div class="card">
+            <h3>Karachi Address</h3>
+            <p><span class="icon">📍</span>Suite no. 302, The Forum Mall, Khayban e Jami, Clifton block 9, Karachi, Pakistan</p>
+            <p><span class="icon">☎</span><strong>UAN:</strong> +92-21-111-911-111</p>
+            <p><span class="icon">📞</span><strong>Direct:</strong> +92336 0388955</p>
+        </div>
+
+        <!-- Lahore Address -->
+        <div class="card">
+            <h3>Lahore Address</h3>
+            <p><span class="icon">📍</span>58-G, main commercial market, cavalry ground, lahore cantt</p>
+            <p><span class="icon">☎</span><strong>UAN:</strong> 042-111-911-111</p>
+            <p><span class="icon">📞</span><strong>Direct:</strong> +92345 8970077</p>
+        </div>
+
+        <!-- Islamabad Address -->
+        <div class="card">
+            <h3>Islamabad Address</h3>
+            <p><span class="icon">📍</span>Office no. 11, 2nd floor, plot # 08 pakland business centre I-8 markaz islamabad.</p>
+            <p><span class="icon">📞</span><strong>Direct:</strong> +92318 2575657</p>
+        </div>
+
+        <!-- Email Section -->
+        <div class="email-card">
+            <h3>Email</h3>
+            <p><span class="icon">✉</span>Tralife@gmail.com.pk</p>
+        </div>
+    </div>
+</body>
+</html>

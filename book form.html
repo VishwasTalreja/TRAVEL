@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Package Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333333;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .form-group .radio-group {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-group .radio-group label {
+            font-weight: normal;
+        }
+        .form-group .radio-group input {
+            margin-right: 5px;
+        }
+        .submit-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+        #confirmation-message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            background-color: #f4f4f9;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #confirmation-message h2 {
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container" id="form-container">
+        <h2>Travel Package Form</h2>
+        <form id="travel-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="package">Select Package:</label>
+                <select id="package" name="package" required>
+                    <option value="" disabled selected>Choose a package</option>
+                    <option value="1">MALDIVES</option>
+                    <option value="2">PARIS </option>
+                    <option value="3">TURKEY</option>
+                    <option value="4">BAKU</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Insurance:</label>
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="insurance" value="basic" required> Basic
+                    </label>
+                    <label>
+                        <input type="radio" name="insurance" value="premium" required> Premium
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <div id="confirmation-message">
+        <h2>Thank You for Your Booking!</h2>
+        <p>Your details have been successfully submitted. Our team will contact you shortly.</p>
+        <p>Safe travels!</p>
+    </div>
+
+    <script>
+        const form = document.getElementById("travel-form");
+        const confirmationMessage = document.getElementById("confirmation-message");
+        const formContainer = document.getElementById("form-container");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            
+            formContainer.style.display = "none";
+
+          
+            confirmationMessage.style.display = "block";
+        });
+    </script>
+</body>
+</html>
